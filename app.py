@@ -1,16 +1,12 @@
-from dotenv import load_dotenv
-
-load_dotenv()
 import base64
 import streamlit as st
-import os
 import io
 from PIL import Image 
 import pdf2image
 import google.generativeai as genai
 
-genai.configure(api_key=os.getenv("GOOGLE_API_KEY"))
-
+# Replace 'YOUR_GOOGLE_API_KEY' with your actual Google API key
+genai.configure(api_key='AIzaSyCLCGkqmYlYaiFZWgsbGYtvH5EzFjHRlpU')
 def get_gemini_response(input,pdf_cotent,prompt):
     model=genai.GenerativeModel('gemini-pro-vision')
     response=model.generate_content([input,pdf_content[0],prompt])
