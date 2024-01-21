@@ -1,0 +1,13 @@
+prefix=/Users/fenilmavani/Resume/venv
+exec_prefix=/Users/fenilmavani/Resume/venv
+libdir=/Users/fenilmavani/Resume/venv/lib
+sharedlibdir=/Users/fenilmavani/Resume/venv/lib
+includedir=/Users/fenilmavani/Resume/venv/include
+
+Name: zlib
+Description: zlib compression library
+Version: 1.2.13
+
+Requires:
+Libs: -L${libdir} -L${sharedlibdir} -lz
+Cflags: -I${includedir}
